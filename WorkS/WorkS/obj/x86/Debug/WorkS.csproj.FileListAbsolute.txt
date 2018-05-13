@@ -1,0 +1,9 @@
+D:\vsproject\软件工程\WorkS\WorkS\bin\Debug\WorkS.exe
+D:\vsproject\软件工程\WorkS\WorkS\bin\Debug\WorkS.pdb
+D:\vsproject\软件工程\WorkS\WorkS\obj\x86\Debug\WorkS.Properties.Resources.resources
+D:\vsproject\软件工程\WorkS\WorkS\obj\x86\Debug\WorkS.csproj.GenerateResource.Cache
+D:\vsproject\软件工程\WorkS\WorkS\obj\x86\Debug\WorkS.exe
+D:\vsproject\软件工程\WorkS\WorkS\obj\x86\Debug\WorkS.pdb
+D:\vsproject\软件工程\WorkS\WorkS\obj\x86\Debug\WorkS.login.resources
+D:\vsproject\软件工程\WorkS\WorkS\obj\x86\Debug\WorkS.mainSt.resources
+D:\vsproject\软件工程\WorkS\WorkS\obj\x86\Debug\WorkS.mainTe.resources
