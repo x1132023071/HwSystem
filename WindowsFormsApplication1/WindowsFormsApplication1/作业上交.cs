@@ -98,8 +98,24 @@ namespace WindowsFormsApplication1
                         ss = ds.Tables[0].Rows[i]["题目id"].ToString();
                     }
                 }
+                if (ws.work_st_alive(sq, st_id, ss))
+                {
+                    DialogResult result = MessageBox.Show("已存在该作业是否修改", "提示", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                    if (result == DialogResult.OK)
+                    {
+                        ws.work_update(sq, st_id, ss, textBox_自己作业.Text.Trim(), dt);
+                        MessageBox.Show("修改成功");
+                    }
+                    else
+                    {
+
+                    }
+                }
+                else
+                {
                     ws.work_add(sq, st_id, ss, textBox_自己作业.Text.Trim(), dt);
-                MessageBox.Show("提交成功");
+                    MessageBox.Show("提交成功");
+                }
             }
             catch (Exception exx)
             {

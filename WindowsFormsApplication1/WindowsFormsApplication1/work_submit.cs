@@ -48,5 +48,44 @@ namespace WindowsFormsApplication1
                 MessageBox.Show(e.Message);
             }
         }
+        //修改 作业
+        public void work_update(SQL sq, string work_id, string subject_id, string work_content, DateTime dt)
+        {
+            string message = "";
+            try
+            {
+                message = "update 上交作业 set 上交作业内容='" + work_content + "',上交时间='" + dt + "' where 题目id='" + subject_id + "' and 上交作业id='" + work_id + "'";
+                sq.sql_update(message);
+            }
+            catch
+            {
+                MessageBox.Show("修改失败");
+            }
+
+        }
+        //查询是否已经提交过
+        public bool work_st_alive(SQL sq, string work_id, string subject_id)
+        {
+            string message = "";
+            bool b=false;
+            try
+            {
+                message = "select * from 上交作业 where 题目id='" + subject_id + "' and 上交作业id='" +work_id+"' ";
+                sdr = sq.sql_select_get(message);
+                sdr.Read();
+                if (sdr.HasRows)
+                { b = true; }
+                sdr.Close();
+            }
+            catch (Exception ea)
+            {
+                MessageBox.Show(ea.Message);
+            }
+
+
+
+            return b;
+
+        }
     }
 }
