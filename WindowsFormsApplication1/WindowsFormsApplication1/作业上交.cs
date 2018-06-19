@@ -87,7 +87,7 @@ namespace WindowsFormsApplication1
             work_submit ws = new work_submit();
             DateTime dt = new DateTime();
             dt = DateTime.Now;
-            string ss="";
+            string ss = "";
             try
             {
                 ss = comboBox_作业题目.Text.Trim();

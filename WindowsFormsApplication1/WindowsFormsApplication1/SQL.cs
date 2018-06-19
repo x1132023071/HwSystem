@@ -23,7 +23,7 @@ namespace WindowsFormsApplication1
         public SqlDataReader sr;
         public SQL()
         {
-            this.sql_coon = "Data Source=(local)\\SQLEXPRESS;Initial Catalog=work;User id=sa;PWD=sa";
+            this.sql_coon = "Data Source=PC-20150630SWXC\\SQLEXPRESS01;Initial Catalog=work;Integrated Security=True";
         }
         //开启数据库
         public void sql_start()

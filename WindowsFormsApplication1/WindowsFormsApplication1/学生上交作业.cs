@@ -15,13 +15,15 @@ namespace WindowsFormsApplication1
         private string name,id;
         private SQL sq;
         private string[] st,ss;
+        private string zhiye;
         
-        public 学生上交作业(SQL sq,string name,DataSet ds)
+        public 学生上交作业(SQL sq,string name,DataSet ds,string _zhiye)
         {
             InitializeComponent();
             this.ds = ds;
             this.name = name;
             this.sq = sq;
+            zhiye = _zhiye;
         }
 
         private void 学生上交作业_Load(object sender, EventArgs e)
@@ -65,7 +67,7 @@ namespace WindowsFormsApplication1
                     }
                 }
                 //MessageBox.Show(tm_id+id+name);
-                f = new 上交作业内容(sq,id,name,tm_id,listBox_作业.SelectedItem.ToString(),time);
+                f = new 上交作业内容(sq,id,name,tm_id,listBox_作业.SelectedItem.ToString(),time,zhiye);
                 f.ShowDialog();
             
             }

@@ -156,27 +156,21 @@ namespace WindowsFormsApplication1
                         st_id = sql.sql_select(select_message, "id");
                         select_message = "select 题目id,上交时间 from 上交作业 where 上交作业id=" + st_id + "";
                         ds = sql.sql_select(select_message);
-                        sj = new 学生上交作业(sql, listBox_学生.SelectedItem.ToString(), ds);
+                        sj = new 学生上交作业(sql, listBox_学生.SelectedItem.ToString(), ds,label_职业.Text);
                         sj.ShowDialog();
                         listBox_学生.ClearSelected();
                     }
                     操作窗口_Load(sender, e);
                 }
-                else
+                else if (listBox_学生.SelectedItem.ToString() == name && listBox_学生.SelectedItem != null) 
                 {
-                    if (listBox_学生.SelectedItem != null)
-                    {
-                        if (listBox_学生.SelectedItem.ToString().Equals(name))
-                        {
-                            select_message = "select id from 学生 where 姓名='" + listBox_学生.SelectedItem.ToString() + "'";
-                            st_id = sql.sql_select(select_message, "id");
-                            select_message = "select 题目id,上交时间 from 上交作业 where 上交作业id=" + st_id + "";
-                            ds = sql.sql_select(select_message);
-                            sj = new 学生上交作业(sql, listBox_学生.SelectedItem.ToString(), ds);
-                            sj.ShowDialog();
-                            listBox_学生.ClearSelected();
-                        }
-                    }
+                    select_message = "select id from 学生 where 姓名='" + listBox_学生.SelectedItem.ToString() + "'";
+                    st_id = sql.sql_select(select_message, "id");
+                    select_message = "select 题目id,上交时间 from 上交作业 where 上交作业id=" + st_id + "";
+                    ds = sql.sql_select(select_message);
+                    sj = new 学生上交作业(sql, listBox_学生.SelectedItem.ToString(), ds, label_职业.Text);
+                    sj.ShowDialog();
+                    listBox_学生.ClearSelected();
                     操作窗口_Load(sender, e);
                 }
             }

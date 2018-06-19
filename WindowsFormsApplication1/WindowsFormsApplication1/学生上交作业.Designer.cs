@@ -36,41 +36,45 @@
             // label_学生姓名
             // 
             this.label_学生姓名.AutoSize = true;
-            this.label_学生姓名.Location = new System.Drawing.Point(68, 66);
+            this.label_学生姓名.Location = new System.Drawing.Point(91, 82);
+            this.label_学生姓名.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_学生姓名.Name = "label_学生姓名";
-            this.label_学生姓名.Size = new System.Drawing.Size(59, 12);
+            this.label_学生姓名.Size = new System.Drawing.Size(75, 15);
             this.label_学生姓名.TabIndex = 0;
             this.label_学生姓名.Text = "学生姓名:";
             // 
             // label_name
             // 
             this.label_name.AutoSize = true;
-            this.label_name.Location = new System.Drawing.Point(163, 66);
+            this.label_name.Location = new System.Drawing.Point(217, 82);
+            this.label_name.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_name.Name = "label_name";
-            this.label_name.Size = new System.Drawing.Size(41, 12);
+            this.label_name.Size = new System.Drawing.Size(55, 15);
             this.label_name.TabIndex = 1;
             this.label_name.Text = "label2";
             // 
             // listBox_作业
             // 
             this.listBox_作业.FormattingEnabled = true;
-            this.listBox_作业.ItemHeight = 12;
-            this.listBox_作业.Location = new System.Drawing.Point(60, 99);
+            this.listBox_作业.ItemHeight = 15;
+            this.listBox_作业.Location = new System.Drawing.Point(80, 124);
+            this.listBox_作业.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.listBox_作业.Name = "listBox_作业";
-            this.listBox_作业.Size = new System.Drawing.Size(250, 208);
+            this.listBox_作业.Size = new System.Drawing.Size(332, 259);
             this.listBox_作业.TabIndex = 2;
             this.listBox_作业.SelectedIndexChanged += new System.EventHandler(this.listBox_作业_SelectedIndexChanged);
             // 
             // 学生上交作业
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(384, 361);
+            this.ClientSize = new System.Drawing.Size(512, 451);
             this.Controls.Add(this.listBox_作业);
             this.Controls.Add(this.label_name);
             this.Controls.Add(this.label_学生姓名);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "学生上交作业";
-            this.Text = "学生上交作业";
+            this.Text = "学生作业";
             this.Load += new System.EventHandler(this.学生上交作业_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

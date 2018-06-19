@@ -50,44 +50,51 @@ namespace WindowsFormsApplication1
             comboBox_班级.Enabled = false;
             teacher tc;
             student sd;
-            if (lx.Equals("教师"))
-            {
-                tc = new teacher();
-                if (textBox_name.Text.Trim() == string.Empty)
+            
+                if (lx.Equals("教师"))
                 {
-                    MessageBox.Show("用户名不能空");
-                }
-                else
-                    if (sq.sql_live("select 姓名 from 教师 where 姓名='" + textBox_name.Text.Trim().ToString() + "'"))
+                    tc = new teacher();
+                    if (textBox_name.Text.Trim() == string.Empty)
                     {
-                        MessageBox.Show("该用户名已经存在，请重新输入");
+                        MessageBox.Show("用户名不能空");
                     }
                     else
-                    {
-                        tc.teacher_update(sq, id, textBox_name.Text.Trim(), comboBox_班级.Text, comboBox_性别.Text);
-                        MessageBox.Show("修改信息成功");
-                    }
-            }
-            else
-                if (lx.Equals("学生"))
-                {
-                    sd = new student();
-                       tc = new teacher();
-                if (textBox_name.Text.Trim() == string.Empty)
-                {
-                    MessageBox.Show("用户名不能空");
+                        if (textBox_name.Text != name)
+                        {
+                            if (sq.sql_live("select 姓名 from 教师 where 姓名='" + textBox_name.Text.Trim().ToString() + "'"))
+                            {
+                                MessageBox.Show("该用户名已经存在，请重新输入");
+                            }
+                        }
+                        else
+                        {
+                            tc.teacher_update(sq, id, textBox_name.Text.Trim(), comboBox_班级.Text, comboBox_性别.Text);
+                            MessageBox.Show("修改信息成功");
+                        }
                 }
                 else
-                    if (sq.sql_live("select 姓名 from 学生 where 姓名='" + textBox_name.Text.Trim().ToString() + "'"))
+                    if (lx.Equals("学生"))
                     {
-                        MessageBox.Show("该用户名已经存在，请重新输入");
+                        sd = new student();
+                        tc = new teacher();
+                        if (textBox_name.Text.Trim() == string.Empty)
+                        {
+                            MessageBox.Show("用户名不能空");
+                        }
+                        else
+                            if (textBox_name.Text != name)
+                            {
+                                if (sq.sql_live("select 姓名 from 学生 where 姓名='" + textBox_name.Text.Trim().ToString() + "'"))
+                                {
+                                    MessageBox.Show("该用户名已经存在，请重新输入");
+                                }
+                            }
+                            else
+                            {
+                                sd.student_update(sq, id, textBox_name.Text.Trim(), comboBox_班级.Text, comboBox_性别.Text);
+                                MessageBox.Show("修改信息成功");
+                            }
                     }
-                    else
-                    {
-                        sd.student_update(sq, id, textBox_name.Text.Trim(), comboBox_班级.Text, comboBox_性别.Text);
-                        MessageBox.Show("修改信息成功");
-                    }
-                }
         }
 
         private void button_back_Click(object sender, EventArgs e)

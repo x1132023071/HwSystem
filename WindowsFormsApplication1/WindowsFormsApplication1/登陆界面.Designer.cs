@@ -48,10 +48,11 @@
             this.textBox_用户名.BackColor = System.Drawing.SystemColors.Window;
             this.textBox_用户名.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox_用户名.Font = new System.Drawing.Font("黑体", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBox_用户名.Location = new System.Drawing.Point(4, 5);
+            this.textBox_用户名.Location = new System.Drawing.Point(5, 6);
+            this.textBox_用户名.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox_用户名.Multiline = true;
             this.textBox_用户名.Name = "textBox_用户名";
-            this.textBox_用户名.Size = new System.Drawing.Size(250, 40);
+            this.textBox_用户名.Size = new System.Drawing.Size(333, 50);
             this.textBox_用户名.TabIndex = 0;
             // 
             // textBox_密码
@@ -59,12 +60,14 @@
             this.textBox_密码.BackColor = System.Drawing.SystemColors.Window;
             this.textBox_密码.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox_密码.Font = new System.Drawing.Font("黑体", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBox_密码.Location = new System.Drawing.Point(4, 4);
+            this.textBox_密码.Location = new System.Drawing.Point(5, 5);
+            this.textBox_密码.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox_密码.Multiline = true;
             this.textBox_密码.Name = "textBox_密码";
             this.textBox_密码.PasswordChar = '*';
-            this.textBox_密码.Size = new System.Drawing.Size(250, 40);
+            this.textBox_密码.Size = new System.Drawing.Size(333, 50);
             this.textBox_密码.TabIndex = 3;
+            this.textBox_密码.TextChanged += new System.EventHandler(this.textBox_密码_TextChanged);
             // 
             // button_登录
             // 
@@ -74,9 +77,10 @@
             this.button_登录.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button_登录.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_登录.Font = new System.Drawing.Font("黑体", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button_登录.Location = new System.Drawing.Point(159, 266);
+            this.button_登录.Location = new System.Drawing.Point(212, 332);
+            this.button_登录.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button_登录.Name = "button_登录";
-            this.button_登录.Size = new System.Drawing.Size(150, 50);
+            this.button_登录.Size = new System.Drawing.Size(200, 62);
             this.button_登录.TabIndex = 4;
             this.button_登录.Text = "登录";
             this.button_登录.UseVisualStyleBackColor = false;
@@ -86,9 +90,10 @@
             // 
             this.label_注册账户.AutoSize = true;
             this.label_注册账户.BackColor = System.Drawing.Color.Transparent;
-            this.label_注册账户.Location = new System.Drawing.Point(483, 291);
+            this.label_注册账户.Location = new System.Drawing.Point(644, 364);
+            this.label_注册账户.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_注册账户.Name = "label_注册账户";
-            this.label_注册账户.Size = new System.Drawing.Size(53, 12);
+            this.label_注册账户.Size = new System.Drawing.Size(67, 15);
             this.label_注册账户.TabIndex = 6;
             this.label_注册账户.Text = "注册账户";
             this.label_注册账户.Click += new System.EventHandler(this.label_注册账户_Click);
@@ -96,18 +101,20 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(275, 360);
+            this.label2.Location = new System.Drawing.Point(367, 450);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(0, 12);
+            this.label2.Size = new System.Drawing.Size(0, 15);
             this.label2.TabIndex = 7;
             // 
             // label_用户名
             // 
             this.label_用户名.BackColor = System.Drawing.Color.Transparent;
             this.label_用户名.Font = new System.Drawing.Font("黑体", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label_用户名.Location = new System.Drawing.Point(122, 107);
+            this.label_用户名.Location = new System.Drawing.Point(163, 134);
+            this.label_用户名.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_用户名.Name = "label_用户名";
-            this.label_用户名.Size = new System.Drawing.Size(100, 40);
+            this.label_用户名.Size = new System.Drawing.Size(133, 50);
             this.label_用户名.TabIndex = 9;
             this.label_用户名.Text = "用户名:";
             this.label_用户名.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -120,9 +127,10 @@
             this.button_退出.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button_退出.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_退出.Font = new System.Drawing.Font("黑体", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button_退出.Location = new System.Drawing.Point(315, 266);
+            this.button_退出.Location = new System.Drawing.Point(420, 332);
+            this.button_退出.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button_退出.Name = "button_退出";
-            this.button_退出.Size = new System.Drawing.Size(150, 50);
+            this.button_退出.Size = new System.Drawing.Size(200, 62);
             this.button_退出.TabIndex = 10;
             this.button_退出.Text = "退出";
             this.button_退出.UseVisualStyleBackColor = false;
@@ -132,9 +140,10 @@
             // 
             this.label_密码.BackColor = System.Drawing.Color.Transparent;
             this.label_密码.Font = new System.Drawing.Font("黑体", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label_密码.Location = new System.Drawing.Point(122, 187);
+            this.label_密码.Location = new System.Drawing.Point(163, 234);
+            this.label_密码.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_密码.Name = "label_密码";
-            this.label_密码.Size = new System.Drawing.Size(100, 40);
+            this.label_密码.Size = new System.Drawing.Size(133, 50);
             this.label_密码.TabIndex = 11;
             this.label_密码.Text = "密  码:";
             this.label_密码.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -143,9 +152,10 @@
             // 
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("黑体", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label6.Location = new System.Drawing.Point(243, 9);
+            this.label6.Location = new System.Drawing.Point(324, 11);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(222, 40);
+            this.label6.Size = new System.Drawing.Size(296, 50);
             this.label6.TabIndex = 12;
             this.label6.Text = "作业提交系统";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -153,26 +163,28 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.textBox_用户名);
-            this.panel1.Location = new System.Drawing.Point(277, 107);
+            this.panel1.Location = new System.Drawing.Point(369, 134);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(259, 50);
+            this.panel1.Size = new System.Drawing.Size(345, 62);
             this.panel1.TabIndex = 13;
             // 
             // panel2
             // 
             this.panel2.Controls.Add(this.textBox_密码);
-            this.panel2.Location = new System.Drawing.Point(277, 187);
+            this.panel2.Location = new System.Drawing.Point(369, 234);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(259, 49);
+            this.panel2.Size = new System.Drawing.Size(345, 61);
             this.panel2.TabIndex = 14;
             // 
             // 登陆界面
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.登陆界面1;
-            this.ClientSize = new System.Drawing.Size(700, 400);
+            this.ClientSize = new System.Drawing.Size(933, 500);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label6);
@@ -183,6 +195,7 @@
             this.Controls.Add(this.label_注册账户);
             this.Controls.Add(this.button_登录);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "登陆界面";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "s";

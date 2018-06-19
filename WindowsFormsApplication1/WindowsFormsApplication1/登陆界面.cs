@@ -17,6 +17,7 @@ namespace WindowsFormsApplication1
         public 登陆界面()
         {
             InitializeComponent();
+            this.textBox_密码.KeyDown += new KeyEventHandler(textBox_密码_KeyDown);
         }
         //载入数据库
         private void 登陆界面_Load(object sender, EventArgs e)
@@ -133,6 +134,18 @@ namespace WindowsFormsApplication1
             }
         }
 
+        private void textBox_密码_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+        private void textBox_密码_KeyDown(object sender, KeyEventArgs e) 
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                this.button_登录_Click(sender, e); 
+            }
+        
+        }
        
     }
 }

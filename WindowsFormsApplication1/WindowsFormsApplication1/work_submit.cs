@@ -20,7 +20,7 @@ namespace WindowsFormsApplication1
         //获取作业数量
         public string get_work(SQL sq)
         {
-            string x="";
+            string x = "";
             try
             {
                 x = "上交作业";
@@ -33,15 +33,15 @@ namespace WindowsFormsApplication1
             return x;
         }
         //添加提交作业
-        public void work_add(SQL sq, string work_id, string subject_id, string work_content,DateTime dt)
+        public void work_add(SQL sq, string work_id, string subject_id, string work_content, DateTime dt)
         {
-            string add_message="";
+            string add_message = "";
             try
             {
                 add_message = "insert into 上交作业(上交作业id,题目id,上交作业内容,上交时间) values(@0,@1,@2,@3)";
-                st = new string[]{work_id,subject_id,work_content};
+                st = new string[] { work_id, subject_id, work_content };
                 sq.sql_insert(add_message, 4, 4, st, dt);
-            
+
             }
             catch (Exception e)
             {
@@ -67,10 +67,10 @@ namespace WindowsFormsApplication1
         public bool work_st_alive(SQL sq, string work_id, string subject_id)
         {
             string message = "";
-            bool b=false;
+            bool b = false;
             try
             {
-                message = "select * from 上交作业 where 题目id='" + subject_id + "' and 上交作业id='" +work_id+"' ";
+                message = "select * from 上交作业 where 题目id='" + subject_id + "' and 上交作业id='" + work_id + "' ";
                 sdr = sq.sql_select_get(message);
                 sdr.Read();
                 if (sdr.HasRows)

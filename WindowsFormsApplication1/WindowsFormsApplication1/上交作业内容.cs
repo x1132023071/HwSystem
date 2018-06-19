@@ -14,7 +14,8 @@ namespace WindowsFormsApplication1
         private SQL sq;
         private string title;
         private string name, id, tm_id,time;
-        public 上交作业内容(SQL sq,string id,string name,string tm_id,string title,string time)
+        private string zhiye;
+        public 上交作业内容(SQL sq,string id,string name,string tm_id,string title,string time,string _zhiye)
         {
             InitializeComponent();
             this.sq = sq;
@@ -23,6 +24,11 @@ namespace WindowsFormsApplication1
             this.id = id;
             this.tm_id = tm_id;
             this.time = time;
+            zhiye = _zhiye;
+            if (zhiye == "教师") button_修改.Visible = false;
+            else {
+                textBox1.ReadOnly = false;
+            }
         }
 
         private void 上交作业内容_Load(object sender, EventArgs e)
@@ -48,6 +54,11 @@ namespace WindowsFormsApplication1
         private void button_返回_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void button_修改_Click(object sender, EventArgs e)
+        {
+            sq.sql_update("UPDATE 上交作业 SET 上交作业内容 = '"+textBox1.Text+"' WHERE 上交作业id = '"+id+"' and 题目id = '"+tm_id+"'");
         }
     }
 }
