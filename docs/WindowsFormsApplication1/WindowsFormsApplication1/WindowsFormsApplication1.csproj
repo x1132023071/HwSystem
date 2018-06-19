@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7C23E219-FFFB-49B8-8260-1D919F98D274}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WindowsFormsApplication1</RootNamespace>
+    <AssemblyName>WindowsFormsApplication1</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SQL.cs" />
+    <Compile Include="student.cs" />
+    <Compile Include="teacher.cs" />
+    <Compile Include="user.cs" />
+    <Compile Include="work_arrange.cs" />
+    <Compile Include="work_submit.cs" />
+    <Compile Include="上交作业内容.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="上交作业内容.Designer.cs">
+      <DependentUpon>上交作业内容.cs</DependentUpon>
+    </Compile>
+    <Compile Include="作业上交.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="作业上交.Designer.cs">
+      <DependentUpon>作业上交.cs</DependentUpon>
+    </Compile>
+    <Compile Include="作业布置.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="作业布置.Designer.cs">
+      <DependentUpon>作业布置.cs</DependentUpon>
+    </Compile>
+    <Compile Include="作业题目内容.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="作业题目内容.Designer.cs">
+      <DependentUpon>作业题目内容.cs</DependentUpon>
+    </Compile>
+    <Compile Include="学生上交作业.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="学生上交作业.Designer.cs">
+      <DependentUpon>学生上交作业.cs</DependentUpon>
+    </Compile>
+    <Compile Include="操作窗口.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="操作窗口.Designer.cs">
+      <DependentUpon>操作窗口.cs</DependentUpon>
+    </Compile>
+    <Compile Include="注册界面.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="注册界面.Designer.cs">
+      <DependentUpon>注册界面.cs</DependentUpon>
+    </Compile>
+    <Compile Include="班级设置.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="班级设置.Designer.cs">
+      <DependentUpon>班级设置.cs</DependentUpon>
+    </Compile>
+    <Compile Include="用户设置.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="用户设置.Designer.cs">
+      <DependentUpon>用户设置.cs</DependentUpon>
+    </Compile>
+    <Compile Include="登陆界面.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="登陆界面.Designer.cs">
+      <DependentUpon>登陆界面.cs</DependentUpon>
+    </Compile>
+    <Compile Include="退出界面.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="退出界面.Designer.cs">
+      <DependentUpon>退出界面.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="上交作业内容.resx">
+      <DependentUpon>上交作业内容.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="作业上交.resx">
+      <DependentUpon>作业上交.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="作业布置.resx">
+      <DependentUpon>作业布置.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="作业题目内容.resx">
+      <DependentUpon>作业题目内容.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="学生上交作业.resx">
+      <DependentUpon>学生上交作业.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="操作窗口.resx">
+      <DependentUpon>操作窗口.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="注册界面.resx">
+      <DependentUpon>注册界面.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="班级设置.resx">
+      <DependentUpon>班级设置.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="用户设置.resx">
+      <DependentUpon>用户设置.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="登陆界面.resx">
+      <DependentUpon>登陆界面.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="退出界面.resx">
+      <DependentUpon>退出界面.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\登陆界面.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\登陆界面1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\按钮_编辑.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\按钮_编辑1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pt_user.bmp" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
